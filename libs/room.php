@@ -2,18 +2,19 @@
 require_once "database.php";
 
 //Hiển thị toàn bộ danh sách sản phẩm bao gồm cả tên danh mục (Category name)
-function list_all_product()
+function list_all_room()
 {
     $sql = "SELECT 
-    p.id as id_product, 
-    p.name as name_product,
-    c.name as name_category,  
-    p.image as image_product, 
-    status, 
-    price,
-    p.created_at as date_created  
-    FROM rooms p INNER JOIN room_types c ON p.cate_id=c.id 
-    Order by id_product DESC";
+    p.id as id, 
+    c.name_room_type as name_room_type,  
+    images as image_room,
+    c.room_price as room_price, 
+    p.room_number as number_room,
+    p.room_description as description_room,
+    p.room_status as status_room
+     
+    FROM rooms p INNER JOIN room_types c ON p.room_type_id=c.id 
+    Order by id DESC";
     return query($sql);
 }
 //Hàm lấy ra 1 bản ghi (dòng)
@@ -22,58 +23,56 @@ function list_one_product($id)
     return listOne('rooms', 'id', $id);
 }
 //thêm dữ liệu vào bảng
-function insert_products($name,$description,$image,$detail,$price,$sale,$status,$cate_id,$created_at)
+function insert_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status)
 {
-    $created_at = date('Y-m-d');
+    
     $data = [
-        'name' => $name,
-        'description' => $description,
-        'image' => $image,
-        'detail' => $detail,
-        'price' => $price,
-        'sale' => $sale,
-        'status' => $status,
-        'cate_id' => $cate_id,
-        'created_at' => $created_at,
+        'room_type_id' => $room_type_id,
+        'images' => $images,
+        'room_price'=>$room_price,
+        'room_number' => $room_number,
+        'room_description' => $room_description,
+        'room_status' => $room_status,
+        
     ];
+    
     return insert('rooms', $data);
+    
 }
 
 
 //$cate_id, $name, ... dữ liệu để sửa
 //$id_value giá trị điều kiện sửa sản phẩm theo id
-function update_product($cate_id, $name, $description, $image, $detail, $price, $sale, $status, $updated_at, $id_value)
+function edit_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status,$id)
 {
-    $updated_at = date('Y-m-d');
+    
     $data = [
-        'cate_id' => $cate_id,
-        'name' => $name,
-        'description' => $description,
-        'image' => $image,
-        'detail' => $detail,
-        'price' => $price,
-        'sale' => $sale,
-        'status' => $status,
-        'updated_at' => $updated_at
+        'room_type_id' => $room_type_id,
+        'images' => $images,
+        'room_price'=> $room_price,
+        'room_number' => $room_number,
+        'room_description' => $room_description,
+        'room_status' => $room_status,
     ];
-    return update('rooms', $data, 'id', $id_value);
+    var_dump($data);
+    return update('rooms', $data, 'id', $id);
 }
 
 //Xóa dữ liệu trong bảng
-function delete_products($id)
+function delete_room($id)
 {
     delete('rooms','id',$id);
 }
 
 //hàm tìm kiếm sản phẩm
-function search_product($name){
-    $sql = "SELECT p.id as id_product, 
-                p.name as  name_product,
-                p.image as image_product,
-                status , price
+function search_rooms($name_room_type){
+    $sql = "SELECT p.id as id, 
+                p.name_room_type as  name_room_type,
+                p.images as images,
+                room_price,room_number,room_description,room_status
                 FROM rooms p join room_types c
-                ON p.cate_id = c.id
-                WHERE p.name LIKE '%$name%'";
+                ON p.name_room_type = c.id
+                WHERE p.name_room_type LIKE '%$name_room_type%'";
     return query($sql);
 }
 

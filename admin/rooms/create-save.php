@@ -6,18 +6,18 @@ require_once "../../config/config.php";
 if(isset($_POST['btnsave'])){
     extract($_REQUEST);
     $okUpload = false;
-    if($_FILES['image']['size'] > 0){
+    if($_FILES['images']['size'] > 0){
         $okUpload = true;
-        $image = uniqid().$_FILES['image']['name'];
+        $images = uniqid().$_FILES['images']['name'];
     }else{
-        $image = '';
+        $images = '';
     }
-    insert_products($name,$description,$image,$detail,$price,$sale,$status,$cate_id,$created_at);
+    insert_room($room_type_id,$images,$room_number,$room_description,$room_status);
     if($okUpload){
-        move_uploaded_file($_FILES['image']['tmp_name'],'../../images/' . $image);
+        move_uploaded_file($_FILES['images']['tmp_name'],'../../images/' . $images);
     }
     $_SESSION['message'] = "Thêm dữ liệu thành công";
-    header('Location:' .ROOT .'admin/?page=product');
+    header('Location:' .ROOT .'admin/?page=room');
     die();
 }
 ?>

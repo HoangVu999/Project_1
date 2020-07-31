@@ -6,6 +6,7 @@ require_once 'config/config.php';
 require_once 'libs/users.php';
 require_once 'libs/comments.php';
 require_once 'libs/slider.php';
+$dolar = insert_room(2,2,1,1,1);
 //Nếu đã đăng nhập rồi thì check_session
 extract($_REQUEST);
 //if (isset($btndangnhap)) {
@@ -24,7 +25,7 @@ extract($_REQUEST);
 //    }
 //}
 $page = isset($_GET['page']) ? $_GET['page'] : '';
-$categories = list_all_category();
+
 //$pro_list_one = list_one_product($id);
 switch ($page) {
     case '':

@@ -1,7 +1,8 @@
 <?php
-require_once '../libs/room_types.php';
-$pro = list_all_category();
+require_once '../libs/room_type.php';
+$pro = list_all_roomType();
 ?>
+<script src="https://cdn.tiny.cloud/1/ld34vclndumv7xny2s3pnsrpxwoe9floxn96fpbl57r085kv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -9,55 +10,39 @@ $pro = list_all_category();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h3 class="m-0 font-weight-bold text-primary">Thêm sản phẩm
+            <h3 class="m-0 font-weight-bold text-primary">Thêm phòng
             </h3>
         </div>
         <div class="card-body">
-            <form action="products/create-save.php" method="post" enctype="multipart/form-data">
-                <div class="row">
-                    <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Nhập tên sản phẩm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <input type="text" name="description" id="description" class="form-control" placeholder="Nhập mô tả sản phẩm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image</label><br>
-                        <input type="file" name="image" class="form-input-file border" id="image">
-                    </div>
-                    <div class="form-group">
-                        <label for="detail">Detail</label>
-                        <textarea class="form-control" id="detail" name="detail" rows="10"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="price">Price</label>
-                        <input type="number" name="price" id="price" class="form-control" placeholder="Nhập giá sản phẩm" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="sale">Sale</label>
-                        <input type="number" name="sale" id="sale" class="form-control" placeholder="Nhập giá Sale" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="status">Status</label>
-                        <div class="form-check">
-                            <input type="checkbox" name="status" class="form-check-input status" id="" <?= ($product['status'] == 1) ? 'checked' : '' ?> <label for="status" class="status-title">Trạng thái <span id="span"><?= ($product['status'] == 1) ? 'Có hàng' : 'Hết hàng' ?></span></label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="cate_id">Category Name</label>
-                        <select name="cate_id" id="cate_id" class="form-control">
-                            <?php foreach ($pro as $p) : ?>
-                                <option value="<?= $p['id'] ?>"><?= $p['name'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                </div>
-             </div>
+        <form action="rooms/create-save.php" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Name Room Type</label>
+            <br>
+            <select name="room_type_id" id="">
+            <?php foreach($pro as $c): ?>
+                <option value="<?=$c['id']?>"><?=$c['name_room_type']?></option>
+            <?php endforeach; ?>    
+        </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Image</label> <br>
+            <input type="file" name="images" class="form-file-input" id="">
+        </div>
+        <div class="form-group">
+            <label for="name">Number Room</label>
+            <input type="text" name="room_number" id="name" class="form-control" placeholder="Nhập số phòng" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Description</label>
+            <textarea type="text" name="room_description" id="description" class="form-control" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="name">Status</label>
+            <select name="room_status" id="status">
+                <option value="0">Empty</option>
+                <option value="1">Full</option>
+            </select>
+        </div>
                 <button type="submit" name="btnsave" class="btn btn-primary float-right"><i class="fa fa-check"></i> Lưu</button>
             </form>
         </div>
@@ -66,6 +51,6 @@ $pro = list_all_category();
 <script>
     //Thêm trình soạn thảo văn bản tinymce vào phần nội dung của sản phẩm
     tinymce.init({
-        selector: '#detail'
+        selector: '#description'
     });
 </script>

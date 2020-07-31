@@ -103,25 +103,26 @@ if (isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 ?>
-    <script>
-        $(document).ready(function () {
-            $('#checkall').change(function () {
-                $('input:checkbox').prop('checked', $(this).prop('checked'));
-            })
-            $('#btndel-category').click(function () {
-                if ($('input:checked').length === 0) {
-                    alert("Bạn cần chọn ít nhất 1 danh mục")
-                    return false;
-                }
-            })
+<Script>
+    $(document).ready(function(){
+        $('#checkall').change(function(){
+            $('input:checkbox').prop('checked',$(this).prop('checked'));
         })
-        $('.status').change(function () {
-            if ($(this).prop('checked')) {
-                $('#span').html('Còn hàng')
-            } else {
-                $('#span').html('Hết hàng')
+        $('#btndel-category').click(function(){
+            if ($('input:checked').length===0){
+                alert ("Bạn cần chọn ít nhất một mục");
+                return false;
             }
         })
-    </script>
+    
+    $('.status').change(function() {
+            if ($(this).prop('checked')) {
+                $('#span').html('Empty');
+            } else {
+                $('#span').html('Full');
+            }
+        })
+    })
+</Script>
 <?php
 ob_end_flush();
