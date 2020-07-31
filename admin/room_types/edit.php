@@ -18,7 +18,7 @@ $rType = list_one_roomType('id', $id);
                 </div>
                 <div class="form-group">
                     <label for="name">Giá loại phòng</label>
-                    <input type="number" name="price" id="price" class="form-control" placeholder="Tên danh mục" value="<?= $rType['room_price'] ?>">
+                    <input type="text" name="price" id="price" class="form-control" placeholder="Tên danh mục" value="<?= $rType['room_price'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="name">Giảm giá loại phòng</label>

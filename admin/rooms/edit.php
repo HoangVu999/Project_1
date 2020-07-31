@@ -45,6 +45,7 @@ $cate = list_one_product($id);
             <label for="name">Image</label> <br>
             <input type="file" name="images" class="form-file-input" id="">
         </div>
+        
         <div class="form-group">
             <label for="name">Number Room</label>
             <input type="text" name="room_number" id="number_room" class="form-control" value="<?=$cate['room_number']?>" required>

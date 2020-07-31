@@ -12,7 +12,7 @@ if(isset($_POST['btnsave'])){
     }else{
         $images = '';
     }
-    insert_room($room_type_id,$images,$room_number,$room_description,$room_status);
+    insert_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status);
     if($okUpload){
         move_uploaded_file($_FILES['images']['tmp_name'],'../../images/' . $images);
     }

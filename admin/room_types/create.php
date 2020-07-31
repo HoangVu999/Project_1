@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="name">Giá loại phòng</label>
-                    <input type="number" name="price" id="price" class="form-control" placeholder="Nhập giá loại phòng" required>
+                    <input type="text" name="price" id="price" class="form-control" placeholder="Nhập giá loại phòng" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Giảm giá loại phòng</label>

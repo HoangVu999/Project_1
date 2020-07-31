@@ -8,7 +8,7 @@ function list_all_room()
     p.id as id, 
     c.name_room_type as name_room_type,  
     images as image_room,
-    c.room_price as room_price, 
+    room_price, 
     p.room_number as number_room,
     p.room_description as description_room,
     p.room_status as status_room
@@ -43,13 +43,12 @@ function insert_room($room_type_id,$images,$room_price,$room_number,$room_descri
 
 //$cate_id, $name, ... dữ liệu để sửa
 //$id_value giá trị điều kiện sửa sản phẩm theo id
-function edit_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status,$id)
+function edit_room($room_type_id,$images,$room_number,$room_description,$room_status,$id)
 {
     
     $data = [
         'room_type_id' => $room_type_id,
         'images' => $images,
-        'room_price'=> $room_price,
         'room_number' => $room_number,
         'room_description' => $room_description,
         'room_status' => $room_status,
