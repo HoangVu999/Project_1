@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+
+<!-- Mirrored from laxurytrip.themebuilder.website/room-list-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Jul 2020 04:30:34 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="booking, hotel, apartment, bed, chalet, holiday, hostel, hotel, motel, reservation, resort, rooms, adventure, coupon, tour, travel">
+    <meta name="author" content="themebeck">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <title>Room Details | King Hotel</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/theme.fonts.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--animate css-->
+    <link rel="stylesheet" href="css/animate.min.html">
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+    <!--plugin style css-->
+    <link rel="stylesheet" href="css/plugin.style.css">
+
+    <!-- global style css -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--color css-->
+    <link rel="stylesheet" href="css/color-1.css">
+
+    <!--responsive css-->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- ======================================= 
+        ==Start Header section==  
+    =======================================-->
+    <header class="hotel-header transparent">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="menuzord" class="menuzord p-0">
+                        <a href="index.html" class="menuzord-brand custom-logo-link"><img src="images/logo.png" class="custom-logo" alt="logo"></a>
+                        <ul class="menuzord-menu">
+                            <li class="active"><a href="index.html">Trang chủ</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="index-2.html">Home-2</a></li>
+                                    <li><a href="index-3.html">Home-3</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="room-list.html">Phòng</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="room-list.html">Room List</a></li>
+                                    <li><a href="room-list-details.html">Room Details</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <!-- <li><a href="spa.html">Spa</a></li> -->
+                            <li><a href="blog.html">Blog</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="new.html">Blog</a></li>
+                                    <li><a href="new-details.html">Blog Details</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <!--/menuzord-->
+                </div>
+                <!--/col-->
+            </div>
+            <!--/row-->
+        </div>
+    </header>
+    <!-- ======================================= 
+        ==End Header section==  
+    =======================================-->
+
+
+    <!-- ======================================= 
+        ==Start Breadcrumbs section==  
+    =======================================-->
+    <section class="hotel-breadcrumbs pos-relative">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs-content align-row-spacebetween">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="room-list.html">Phòng</a></li>
+                            <li class="active">Chi tiết phòngg</li>
+                        </ol>
+                        <h2 class="text-uppercase color-ff"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================= 
+        ==End Breadcrumbs section==  
+    =======================================-->
+
+
+    <!-- ======================================= 
+        ==Start details info section==  
+    =======================================-->
+    <section class="details-info section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="room-img">
+                        <img src="images/room-details-img1.jpg" alt="room img" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="booking-form">
+                        <form action="#">
+                            <h4 class="color-22 text-center playfair">Phòng bạn chọn</h4>
+                            <p class="color-22 text-center">KingHotel</p>
+                            <span class="divider"></span>
+                            <div class="group checkin">
+                                <label for="booking-checkin">Ngày đến</label>
+                                <input type="text" id="booking-checkin" placeholder="MM/DD/YY" readonly>
+                            </div>
+                            <div class="group checkout">
+                                <label for="booking-checkout">Ngày đi</label>
+                                <input type="text" id="booking-checkout" placeholder="MM/DD/YY" readonly>
+                            </div>
+                            <div class="group children">
+                                <label for="children">Người lớn</label>
+                                <input type="text" name="children" id="children" value="1" readonly>
+                                <span class="increse"><i class="fa fa-angle-up"></i></span>
+                                <span class="decrese"><i class="fa fa-angle-down"></i></span>
+                            </div>
+                            <div class="group adult">
+                                <label for="children">Trẻ em</label>
+                                <input type="text" name="children" id="adult" value="1" readonly>
+                                <span class="increse"><i class="fa fa-angle-up"></i></span>
+                                <span class="decrese"><i class="fa fa-angle-down"></i></span>
+                            </div>
+
+                            <button type="submit" class="btn-default solid-bg-btn pos-relative"><span>Đặt ngay</span></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="details-text">
+                        <h3 class="playfair color-33 mb-30">Phòng cho gia đình</h3>
+                        <p>
+                            Tất cả phòng nghỉ tại khách sạn đều được trang bị máy điều hòa, truyền hình cáp màn hình phẳng, ấm đun nước, chậu rửa vệ sinh (bidet), máy sấy tóc và bàn làm việc. Các phòng còn có WiFi miễn phí cũng như phòng tắm riêng đi kèm vòi sen và đồ vệ sinh cá
+                            nhân miễn phí. Tại "Peridot Grand Hotel & Spa by AIRA", các phòng còn được trang bị khu vực ghế ngồi. <br /><br /> Khách nghỉ ở đây có thể thưởng thức bữa sáng kiểu lục địa hoặc tự chọn.<br /><br
+                            /> Peridot Grand Hotel & Spa by AIRA còn có sân hiên tắm nắng. Khách nghỉ tại khách sạn có thể tham gia các hoạt động trong và xung quanh thành phố Hà Nội, như đi xe đạp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================= 
+        ==End details info section==  
+    =======================================-->
+
+
+    <!-- ======================================= 
+        ==Start facilities action section==  
+    =======================================-->
+    <section class="room-facilities section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="color-1c pos-relative">Tiện nghi </h2>
+                        <p class="color-1c text-uppercase">King Hotel mang lại dịch vụ tốt nhất</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <ul class="facilities-list clearfix">
+                        <li>Tủ lạnh</li>
+                        <li>Điều hòa 1 chiều</li>
+                        <li>Vòi sen</li>
+                        <li>Máy sấy</li>
+                        <li>Gym</li>
+                        <li>Bể bơi</li>
+                        <li>TV 4K full HD</li>
+                        <li>Máy giặt</li>
+                        <li>WiFi</li>
+                        <li>Phòng xông hơi</li>
+                        <li>Giạt ủi</li>
+                        <li>Rèm che ánh sáng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================= 
+        ==End facilities section==  
+    =======================================-->
+
+    <section class="blog-details section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title-v3 text-center">
+                        <span class="tag__comment">Hãy nói cảm nhận của bạn để chúng tôi hoàn thiện hơn</span>
+                        <p class="color-1c text-uppercase">King Hotel mang lại dịch vụ tốt nhất</p>
+                    </div>
+                    <div class="blog-details-content">
+                        <div class="comment-area">
+                            <h4 class="comment-title color-33 fw-600">Comments <span>(2)</span></h4>
+                            <ul class="comment-wrapper pt-45">
+                                <li>
+                                    <img src="images/commenter-img1.jpg" alt="author img">
+                                    <h6><span><a href="#" class="name">Kavin smith </a> - CEO CHI ART PRO</span></h6>
+                                    <p>Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehiculaa,Duis lacus </p>
+                                </li>
+                                <li>
+                                    <img src="images/commenter-img2.jpg" alt="author img">
+                                    <h6><span><a href="#" class="name">Kavin smith </a> - CEO CHI ART PRO</span></h6>
+                                    <p>Vestibulum imperdiet nibh vel magna lacinia ultrices. Sed id interdum urna. Nam ac elit a ante commodo tristique. Duis lacus urna, condimentum a vehiculaa,Duis lacus </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/comment-area-->
+                        <div class="comment-form contact-form">
+                            <h4 class="contact-title color-33 pb-50">Để lại bình luận của bạn</h4>
+                            <div class="abform-area clearfix">
+                                <form action="#" method="post">
+                                    <div class="abinput-group name float-left">
+                                        <input type="text" name="name" placeholder="Tên...">
+                                    </div>
+                                    <div class="abinput-group email float-left">
+                                        <input type="email" name="email" placeholder="Email...">
+                                    </div>
+                                    <div class="abinput-group msg">
+                                        <textarea name="msg" placeholder="Nhận xét ..."></textarea>
+                                    </div>
+                                    <button type="submit" class="pos-relative btn-default solid-bg-btn"><span>Gửi đi</span></button>
+                                </form>
+                                <!--/form-->
+                            </div>
+                        </div>
+                        <!--/comment form-->
+
+                    </div>
+                </div>
+                <!--/col-->
+
+
+                <!--/col-->
+            </div>
+        </div>
+    </section>
+    <!--/comment-area-->
+
+
+
+    <!-- ======================================= 
+        ==Start hotel view section==  
+    =======================================-->
+    <section class="hotel-room v3 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-v3 text-center">
+                        <h3>Danh sách phòng bạn có thể thích</h3>
+                        <p class="text-uppercase color-55">Các phòng có sẵn</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-room">
+                        <a href="room-list-details.html" class="room-img"><img src="images/room-img1.jpg" alt="room img" class="img-fluid"></a>
+                        <h4 class="price">140.000 VNĐ <span>/ Tối</span></h4>
+                        <h5 class="mb-15"><a href="room-list-details.html">Cho gia đình</a></h5>
+                        <p>Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Các tiện nghi chất lượng hàng đầu như Wifi miễn phí cho mọi phòng, ăn uống trong phòng (24 giờ),
+                            bảo vệ 24 giờ</p> <a href="room-list-details.html" class="btn-default read-more solid-bg-btn"><span>Đặt ngay <i
+                                    class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-room">
+                        <a href="room-list-details.html" class="room-img"><img src="images/room-img2.jpg" alt="room img" class="img-fluid"></a>
+                        <h4 class="price">210.000 VNĐ <span>/ Tối</span></h4>
+                        <h5 class="mb-15"><a href="room-list-details.html">Giường đôi sang trọng</a></h5>
+                        <p>Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Các tiện nghi chất lượng hàng đầu như Wifi miễn phí cho mọi phòng, ăn uống trong phòng (24 giờ),
+                            bảo vệ 24 giờ</p> <a href="room-list-details.html" class="btn-default read-more solid-bg-btn"><span>Đặt ngay <i
+                                    class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-room">
+                        <a href="room-list-details.html" class="room-img"><img src="images/room-img3.jpg" alt="room img" class="img-fluid"></a>
+                        <h4 class="price">370.000 VNĐ <span>/ Tối</span></h4>
+                        <h5 class="mb-15"><a href="room-list-details.html">Giường đơn sang trọng</a></h5>
+                        <p>Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Các tiện nghi chất lượng hàng đầu như Wifi miễn phí cho mọi phòng, ăn uống trong phòng (24 giờ),
+                            bảo vệ 24 giờ</p> <a href="room-list-details.html" class="btn-default read-more solid-bg-btn"><span>Đặt ngay <i
+                                    class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================= 
+        ==End hotel view section==  
+    =======================================-->
+
+    <!-- ======================================= 
+        ==Start Popular room section==  
+    =======================================-->
+    <!-- <section class="hotel-room list single section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="color-1c pos-relative">Discover More Rooms</h2>
+                        <p class="color-1c text-uppercase">Available Accommodations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-room">
+                        <a href="#" class="room-img"><img src="images/room-img1.jpg" alt="room img" class="img-fluid"></a>
+
+                        <h5 class="mb-15 playfair"><a href="#">Residential</a></h5>
+                        <p>Pellentesque nulla magna, accumsan sed ante quis, gravida feugiat turpis. Vivamus et fringilla ligula. </p>
+                        <span class="divider"></span>
+                        <h4 class="price color-66 mb-15">$80.00 <span>/ Per Night</span></h4>
+                        <a href="#" class="btn-default read-more solid-bg-btn"><span>Book Now <i class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div> -->
+
+    <!--room-2-->
+    <!-- <div class="col-md-4 col-sm-6">
+                    <div class="single-room">
+                        <a href="#" class="room-img"><img src="images/room-img2.jpg" alt="room img" class="img-fluid"></a>
+
+                        <h5 class="mb-15 playfair"><a href="#">Luxurious</a></h5>
+                        <p>Pellentesque nulla magna, accumsan sed ante quis, gravida feugiat turpis. Vivamus et fringilla ligula. </p>
+                        <span class="divider"></span>
+                        <h4 class="price color-66 mb-15">$120.00 <span>/ Per Night</span></h4>
+                        <a href="#" class="btn-default read-more solid-bg-btn"><span>Book Now <i class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div> -->
+
+    <!--room-3-->
+    <!-- <div class="col-md-4 col-sm-6">
+                    <div class="single-room">
+                        <a href="#" class="room-img"><img src="images/room-img3.jpg" alt="room img" class="img-fluid"></a>
+
+                        <h5 class="mb-15 playfair"><a href="#">Delux</a></h5>
+                        <p>Pellentesque nulla magna, accumsan sed ante quis, gravida feugiat turpis. Vivamus et fringilla ligula. </p>
+                        <span class="divider"></span>
+                        <h4 class="price color-66 mb-15">$360.00 <span>/ Per Night</span></h4>
+                        <a href="#" class="btn-default read-more solid-bg-btn"><span>Book Now <i class="ion-android-arrow-dropright"></i></span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+    <!-- ======================================= 
+        ==End Popular room section==  
+    =======================================-->
+
+
+    <!-- ======================================= 
+        ==Start footer section==  
+    =======================================-->
+    <div class="hotel-footer dark">
+        <!-- <div class="bigsocial-link">
+            <ul class="clearfix">
+                <li><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" title="Google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" title="Vemio" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                <li><a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a></li>
+                <li><a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+        </div> -->
+
+        <footer class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                        <img src="images/logo.png" class="footer-logo" alt="footer-logo">
+
+                        <div class="contact-address clearfix pt-30">
+                            <p class="address"><i class="flaticon-placeholder"></i><span class="text-uppercase">ADDRESS:</span> Tòa nhà FPT Polytechnic, Trịnh Văn Bô, Phương Canh, Nam Từ Liêm, Hà Nội</p>
+                            <p class="phone"><i class="flaticon-phone-call"></i><span class="text-uppercase">Phone:</span> +84 846 250 592</p>
+                            <p class="email"><i class="flaticon-mail"></i><span class="text-uppercase">Email:</span> contact@kinghotel.com</p>
+                            <p class="web"><i class="flaticon-internet"></i><span class="text-uppercase">WEbsite:</span> <a href="#">kinghotel.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- <section class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-2 order-lg-1">
+                        <p class="copyright">Copyright <span class="update-year"></span> Laxury Trip. by <a href="https://themeforest.net/user/themebeck" target="_blank">ThemeBeck</a></p>
+                    </div>
+                    <div class="col-lg-8 order-1 order-lg-2">
+                        <ul class="footer-menu display-inline text-right">
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+    <!-- ======================================= 
+        ==End footer section==  
+    =======================================-->
+
+
+
+    <!-- ======================================= 
+        ==Start scroll top==  
+    =======================================-->
+    <div class="scroll-top not-visible"><i class="fa fa-angle-up"></i></div>
+    <!-- =======================================
+        ==End scroll top==  
+    =======================================-->
+
+    <!-- jQuary library -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <!--bootstrap js-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--owl carousel js-->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!--slick js-->
+    <script src="js/slick.js"></script>
+
+    <!--jquery ui js-->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!--all plugin js-->
+    <script src="js/plugin.js"></script>
+
+    <!-- all jQuary activation code here and always it will be bottom of all script tag -->
+    <script src="js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from laxurytrip.themebuilder.website/room-list-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Jul 2020 04:30:49 GMT -->
+
+</html>
