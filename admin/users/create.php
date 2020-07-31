@@ -37,8 +37,8 @@ $user = list_all_user();
                         <div class="form-group">
                             <label for="role">Role <span class="text-danger">*</span></label>
                             <select name="role" id="role" class="form-control" required>
-                                <option value="1">Quản trị viên</option>
                                 <option value="0">Người dùng</option>
+                                <option value="1">Quản trị viên</option>
                             </select>
                         </div>
                         <div class="form-group">

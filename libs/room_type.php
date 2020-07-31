@@ -14,28 +14,26 @@ function list_one_roomType($id, $value)
 }
 
 //thêm dữ liệu vào bảng
-function insert_roomType($name,$price,$price_sale,$comment_id,$created_at)
+function insert_roomType($name,$price,$price_sale,$created_at)
 {
     $created_at = date('Y-m-d');
     $data = [
         'name_room_type' => $name,
         'room_price' => $price,
         'room_price_sale' => $price_sale,
-        'comment_id'=> $comment_id,
         'created_at' => $created_at,
     ];
     return insert('room_types', $data);
 }
 //function update_product
 //$id_value giá trị điều kiện sửa sản phẩm theo id
-function update_roomType($name,$price,$price_sale,$comment_id,$updated_at,$id_value)
+function update_roomType($name,$price,$price_sale,$updated_at,$id_value)
 {
     $updated_at = date('Y-m-d');
     $data = [
         'name_room_type' => $name,
         'room_price' => $price,
         'room_price_sale' => $price_sale,
-        'comment_id'=> $comment_id,
         'updated_at' => $updated_at,
     ];
     return update('room_types', $data,'id',$id_value);

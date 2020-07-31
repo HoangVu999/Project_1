@@ -45,7 +45,7 @@ function insert_user($fullname,$username,$image,$email,$password,$role,$address,
 }
 
 //Cập nhật dữ liệu vào bảng
-function update_user($fullname,$username,$image,$address,$phone,$update_at,$id_value)
+function update_user($fullname,$username,$image,$email,$address,$phone,$update_at,$id_value)
 {
     $update_at = date('Y-m-d');
     $data = [

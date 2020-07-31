@@ -13,7 +13,7 @@ if(isset($_POST['btn-edit'])){
         $image = isset($_POST['image']) ? $_POST['image'] : '';
     }
     $date = date('d-m-Y');
-    update_user($fullname,$username,$image,$address,$phone,$date,$id);
+    update_user($fullname,$username,$image,$email,$address,$phone,$date,$id);
     if($okUpload){
         move_uploaded_file($_FILES['image']['tmp_name'],'../../images/' . $image);
     }

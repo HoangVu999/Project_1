@@ -76,10 +76,15 @@ $roomType = list_all_roomType();
                         </td>
                         <td><?= $rType['id']?></td>
                         <td><?= $rType['name_room_type']?></td>
-                        <td><?= $rType['room_price']?></td>
-                        <td><?= $rType['room_price_sale']?></td>
+                        <td><?= number_format($rType['room_price'], 0, '', ',') ?> VNĐ</td>
+                        <td><?= number_format($rType['room_price_sale'], 0, '', ',') ?> VNĐ</td>
                         <td><?= $rType['comment_id']?></td>
-                        <td><?= $rType['created_at']?></td>
+                        <td>
+                            <?php
+                            $date = date_create($rType['created_at']);
+                            echo date_format($date, 'd-m-Y');
+                            ?>
+                        </td>
                         <td>
                             <a href="<?= ROOT ?>admin/?page=room_type&action=edit&id=<?= $rType['id'] ?>"  class="btn btn-success"><i class="far fa-edit"></i> Sửa</a>
                             <a href="<?= ROOT ?>admin/?page=room_type&id=<?= $rType['id'] ?>" onclick="return confirm('Bạn có muốn xóa danh mục này không')" class="btn btn-danger">

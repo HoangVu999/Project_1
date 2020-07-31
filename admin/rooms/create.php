@@ -44,10 +44,9 @@ $pro = list_all_category();
                     </div>
                     <div class="form-group">
                         <label for="status">Status</label>
-                        <select name="status" id="status" class="form-control">
-                            <option value="1">Còn Hàng</option>
-                            <option value="0">Hết Hàng</option>
-                        </select>
+                        <div class="form-check">
+                            <input type="checkbox" name="status" class="form-check-input status" id="" <?= ($product['status'] == 1) ? 'checked' : '' ?> <label for="status" class="status-title">Trạng thái <span id="span"><?= ($product['status'] == 1) ? 'Có hàng' : 'Hết hàng' ?></span></label>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="cate_id">Category Name</label>

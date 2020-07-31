@@ -27,10 +27,10 @@
                             <input type="file" class="form-control-file border" id="image" name="image">
                             <img src="../images/<?= $user['image'] ?>" width="150" alt="">
                         </div>
-<!--                        <div class="form-group">-->
-<!--                            <label for="email">Email <span class="text-danger">*</span></label>-->
-<!--                            <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required value="--><?//= $user['email'] ?><!--">-->
-<!--                        </div>-->
+                        <div class="form-group">
+                            <label for="email">Email <span class="text-danger">*</span></label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required value="<?= $user['email'] ?>">
+                        </div>
 <!--                        <div class="form-group">-->
 <!--                            <label for="role">Role <span class="text-danger">*</span></label>-->
 <!--                            <select name="role" id="role" class="form-control" required>-->

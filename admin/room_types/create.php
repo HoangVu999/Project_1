@@ -14,7 +14,7 @@
         <div class="card-body">
             <form action="room_types/create-save.php" method="post" enctype="multipart/form-data" class="col-md-8 m-auto">
                 <div class="form-group">
-                    <label for="name"> Tên loại phòng</label>
+                    <label for="name"> Loại phòng</label>
                     <input type="text" name="name" id="name" class="form-control" placeholder="Nhập tên loại phòng" required>
                 </div>
                 <div class="form-group">
@@ -24,10 +24,6 @@
                 <div class="form-group">
                     <label for="name">Giảm giá loại phòng</label>
                     <input type="number" name="price_sale" id="price_sale" class="form-control" placeholder="Giảm giá loại phòng" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">comment_id</label>
-                    <input type="number" name="comment_id" id="comment_id" class="form-control" placeholder="Giảm giá loại phòng" required>
                 </div>
                 <button type="submit" name="btnsave" class="btn btn-primary float-right"><i class="fa fa-check"></i> Lưu</button>
             </form>

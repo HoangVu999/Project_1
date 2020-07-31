@@ -77,21 +77,28 @@ $user = list_all_user();
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
-                <span>Quản lý phòng: </span>
+                <span>Quản lý hóa đơn: </span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
-                <span>Quản lý phòng: </span>
+                <span>Quản lý hóa đơn chi tiết: </span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
-                <span>Quản lý phòng: </span>
+                <span>Quản lý Blog: </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=user"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-users"></i>
+                <span>Quản lý người dùng: </span>
             </a>
         </li>
         <!-- Nav Item - Utilities Collapse Menu -->

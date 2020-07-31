@@ -92,7 +92,12 @@ $user = list_all_user();
                                 <td><?= $u['address']?></td>
                                 <td><?= $u['phone']?></td>
                                 <td><?= $u['gender'] == 0 ? 'Nam' : 'Nữ' ?></td>
-                                <td><?= $u['created_at']?></td>
+                                <td>
+                                    <?php
+                                    $date = date_create($u['created_at']);
+                                    echo date_format($date, 'd-m-Y');
+                                    ?>
+                                </td>
                                 <td>
                                     <a href="<?= ROOT ?>admin/?page=user&action=edit&id=<?= $u['id'] ?>"  class="btn btn-success"><i class="far fa-edit"></i></a>
                                     <a href="<?= ROOT ?>admin/?page=user&id=<?= $u['id'] ?>" onclick="return confirm('Bạn có muốn xóa danh mục này không')" class="btn btn-danger">
