@@ -57,7 +57,7 @@ function insert($table, $data = array())
             $sql .= "$key=:$key, ";
         }
         $sql = rtrim($sql, ", ");
-//        var_dump($data);
+        var_dump($data);
         $stmt = $conn->prepare($sql);
         $result = $stmt->execute($data);
     } catch (PDOException $e) {
@@ -82,6 +82,7 @@ function update($table, $data = array(), $id, $value_id)
         $sql = rtrim($sql, ", ");
         $sql .= " WHERE $id=:$id";
         $data[$id] = $value_id; //Thêm key là id vào mảng data
+        var_dump($data);
         $stmt = $conn->prepare($sql);
         $result = $stmt->execute($data);
     } catch (PDOException $e) {

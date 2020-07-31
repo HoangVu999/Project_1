@@ -72,7 +72,6 @@ $product = list_one_product($id);
                     <label for="detail">Chi tiết sản phẩm</label>
                     <textarea class="form-control" id="detail" name="detail" rows="25"><?= $product['detail'] ?></textarea>
                 </div>
-
                 <button type="submit" name="btn-save-product" class="btn btn-success">Ghi lại</button>
             </form>
         </div>

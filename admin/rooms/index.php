@@ -43,8 +43,8 @@ $result = list_all_product();
                                 <input type="checkbox" name="checkall" id="checkall">
                             </th>
                             <th>ID</th>
-                            <th>Category</th>
-                            <th>Name</th>
+                            <th>ihhihih</th>
+                            <th>asdrgyuiop['</th>
                             <th>Image</th>
                             <th>Status</th>
                             <th>Price</th>

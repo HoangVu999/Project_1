@@ -28,8 +28,23 @@ switch ($page) {
                 break;
         }
         break;
+    case 'new':
+        //Lấy hành động trong room_types
+        $action = isset($_GET['action']) ? $_GET['action'] : '';
+        switch ($action) {
+            case '':
+                //Thêm vào giao diện room_types
+                include_once 'new/index.php';
+                break;
+            case 'add':
+                include_once 'new/create.php';
+                break;
+            case 'edit':
+                include_once 'new/edit.php';
+                break;
+        }
+        break;
     case 'room':
-        //Lấy hành động trong product
         $action = isset($_GET['action']) ? $_GET['action'] : '';
         switch ($action){
             case '':
