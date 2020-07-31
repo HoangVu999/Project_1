@@ -46,12 +46,8 @@
                             <label for="phone">Phone <span class="text-danger">*</span></label>
                             <input type="number" name="phone" id="phone" class="form-control" placeholder="Nhập số điện thoại" required value="<?= $user['phone']?>">
                         </div>
-<!--                        <div class="form-group">-->
-<!--                            <label for="gender">Gender <span class="text-danger">*</span></label>-->
-<!--                            <select name="gender" id="gender" class="form-control">-->
-<!--                                <option value="0">Nữ</option>-->
-<!--                                <option value="1">Nam</option>-->
-<!--                            </select>-->
+<!--                        <div class="form-check">-->
+<!--                            <input type="checkbox" name="gender" class="form-check-input gender" id="" --><?//= ($user['gender'] == 0) ? 'checked' : '' ?><!-- <label for="gender" class="gender-title">Giới tính <span id="span">--><?//= ($user['gender'] == 0) ? 'Nữ' : 'Nam' ?><!--</span></label>-->
 <!--                        </div>-->
                         <input type="hidden" name="id" value="<?= $user['id'] ?>">
                         <button type="submit" name="btn-edit" class="btn btn-primary mx-auto d-block">Câp nhật</button>
