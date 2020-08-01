@@ -29,8 +29,8 @@ $result = list_all_room();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h4 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm
-                <a href="<?= ROOT ?>/admin?page=room&action=add" class="btn btn-primary float-right"> <i class="fas fa-plus-circle"></i> Thêm mới</a>
+            <h4 class="m-0 font-weight-bold text-primary">List Room
+                <a href="<?= ROOT ?>/admin?page=room&action=add" class="btn btn-primary float-right"> <i class="fas fa-plus-circle"></i> Add new</a>
             </h4>
         </div>
         <div class="card-body">
@@ -81,15 +81,15 @@ $result = list_all_room();
                                 <td>
                                     <img src="../images/<?= $r['image_room'] ?>" width="90" alt="">
                                 </td>
-                                <td><?= $r['room_price'] ?></td>
+                                <td><?= number_format($r['room_price'], 0, '', ',')  ?> VNĐ</td>
                                 <td><?= $r['number_room'] ?></td>
                                 <td><?= $r['description_room'] ?></td>
                                 <td><?= ($r['status_room']) ? 'Empty' : 'Full' ?></td>
                                 
 
                                 <td>
-                                    <a href="<?= ROOT ?>admin/?page=room&action=edit&id=<?= $r['id'] ?>" class="btn btn-success"><i class="far fa-edit"></i>Sửa</a>
-                                    <a href="<?= ROOT ?>admin/?page=room&id=<?= $r['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa không')" class="btn btn-danger"><i class="far fa-trash-alt"></i>Xóa</a>
+                                    <a href="<?= ROOT ?>admin/?page=room&action=edit&id=<?= $r['id'] ?>" class="btn btn-success"><i class="far fa-edit"></i>Edit</a>
+                                    <a href="<?= ROOT ?>admin/?page=room&id=<?= $r['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa không')" class="btn btn-danger"><i class="far fa-trash-alt"></i>Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

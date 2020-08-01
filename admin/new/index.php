@@ -10,8 +10,8 @@ if(isset($_GET['id'])){
 }
 if(isset($_POST['btn-del'])){
     extract($_REQUEST);
-    foreach ($id as $id_new){
-        delete_new($id_new);
+    foreach ($id as $id_category){
+        delete_new($id_category);
     }
     $_SESSION['message'] = "Xóa dữ liệu thành công";
     header('location:' . ROOT . 'admin/?page=new');

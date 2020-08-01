@@ -44,8 +44,7 @@ $countUser = $stmt->fetch();
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Số lượng sản
-                                phẩm
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Số lượng phòng
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $countPro['total'] ?></div>
                         </div>
@@ -63,8 +62,8 @@ $countUser = $stmt->fetch();
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Số lượng danh
-                                mục
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Số lượng loại phòng
+                                
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $countCate['total'] ?></div>
                         </div>
