@@ -75,7 +75,7 @@ $user = list_all_user();
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
+            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=order"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
                 <span>Quản lý hóa đơn: </span>

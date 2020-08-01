@@ -12,7 +12,6 @@ function list_all_room()
     p.room_number as number_room,
     p.room_description as description_room,
     p.room_status as status_room
-     
     FROM rooms p INNER JOIN room_types c ON p.room_type_id=c.id 
     Order by id DESC";
     return query($sql);
@@ -23,13 +22,13 @@ function list_one_product($id)
     return listOne('rooms', 'id', $id);
 }
 //thêm dữ liệu vào bảng
-function insert_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status)
+function insert_room($room_type_id,$images,$room_number,$room_description,$room_status)
 {
     
     $data = [
         'room_type_id' => $room_type_id,
         'images' => $images,
-        'room_price'=>$room_price,
+
         'room_number' => $room_number,
         'room_description' => $room_description,
         'room_status' => $room_status,
