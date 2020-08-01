@@ -10,7 +10,7 @@ $pro = list_all_roomType();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h3 class="m-0 font-weight-bold text-primary">Thêm phòng
+            <h3 class="m-0 font-weight-bold text-primary">Add Room
             </h3>
         </div>
         <div class="card-body">
@@ -28,10 +28,7 @@ $pro = list_all_roomType();
             <label for="name">Image</label> <br>
             <input type="file" name="images" class="form-file-input" id="">
         </div>
-        <div class="form-group">
-            <label for="name">Room price</label>
-            <input type="text" name="room_price" id="name" class="form-control" placeholder="Nhập tiền phòng" required>
-        </div>
+        
         <div class="form-group">
             <label for="name">Number Room</label>
             <input type="text" name="room_number" id="name" class="form-control" placeholder="Nhập số phòng" required>

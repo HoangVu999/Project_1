@@ -104,6 +104,21 @@ switch ($page) {
                 break;
         }
         break;
+    case 'setting' :
+        $action = isset($_GET['action']) ? $_GET['action'] : '';
+        switch ($action) {
+            case '':
+                //Thêm vào giao diện product
+                include_once 'setting/index.php';
+                break;
+            case 'add':
+                include_once 'setting/create.php';
+                break;
+            case 'edit':
+                include_once 'setting/edit.php';
+                break;
+        }
+        break;
     case 'logout':
         unset($_SESSION['user']);
         header('Location:' . ROOT . 'admin/login.php');

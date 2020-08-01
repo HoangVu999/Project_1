@@ -6,12 +6,14 @@ function list_all_comment()
 {
     $sql = "SELECT 
     c.id as id_comment, 
-    p.name as name_product,
+    name_room_type,
+    room_number,
     u.fullname as nameuser,
     content,
     c.created_at as date_created  
-    FROM comments c INNER JOIN rooms p ON c.product_id=p.id 
+    FROM comments c INNER JOIN room_types p ON c.room_id=p.id 
                     INNER JOIN users u ON c.user_id=u.id
+                    INNER JOIN rooms r on c.room_id=p.id
     Order by id_comment DESC";
     return query($sql);
 }

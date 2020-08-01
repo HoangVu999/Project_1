@@ -46,8 +46,9 @@ $comment = list_all_comment();
                                 <input type="checkbox" name="checkall" id="checkall">
                             </th>
                             <th>ID</th>
-                            <th>Product_id</th>
-                            <th>User_id</th>
+                            <th>Name Room</th>
+                            <th>Room Number</th>
+                            <th>User Name </th>
                             <th>Content</th>
                             <th>Created_at</th>
                             <th>Action</th>
@@ -58,8 +59,9 @@ $comment = list_all_comment();
                             <th>
                             </th>
                             <th>ID</th>
-                            <th>Product_id</th>
-                            <th>User_id</th>
+                            <th>Name Room</th>
+                            <th>Number Room</th>
+                            <th>User Name </th>
                             <th>Content</th>
                             <th>Created_at</th>
                             <th>Action</th>
@@ -72,7 +74,8 @@ $comment = list_all_comment();
                                     <input type="checkbox" name="id[]" id="" value="<?= $c['id'] ?>">
                                 </td>
                                 <td><?= $c['id_comment'] ?></td>
-                                <td><?= $c['name_product'] ?></td>
+                                <td><?= $c['name_room_type'] ?></td>
+                                <td><?= $c['room_number'] ?></td>
                                 <td><?= $c['nameuser'] ?></td>
                                 <td><?= $c['content'] ?></td>
                                 <td><?= $c['date_created'] ?></td>

@@ -96,10 +96,24 @@ $user = list_all_user();
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=comment"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-pager"></i>
+                <span>Quản lý Comment: </span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=user"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-users"></i>
                 <span>Quản lý người dùng: </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=setting"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-tools"></i>
+                <span>Quản trị setting: </span>
             </a>
         </li>
         <!-- Nav Item - Utilities Collapse Menu -->
@@ -346,8 +360,8 @@ $user = list_all_user();
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION['user']['fullname'] ?></span>
-                    <img class="img-profile rounded-circle" src="../images/<?= $_SESSION['user']['image'] ?>">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                    <img class="img-profile rounded-circle" src="../images/">
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

@@ -23,13 +23,13 @@ function list_one_product($id)
     return listOne('rooms', 'id', $id);
 }
 //thêm dữ liệu vào bảng
-function insert_room($room_type_id,$images,$room_price,$room_number,$room_description,$room_status)
+function insert_room($room_type_id,$images,$room_number,$room_description,$room_status)
 {
     
     $data = [
         'room_type_id' => $room_type_id,
         'images' => $images,
-        'room_price'=>$room_price,
+       
         'room_number' => $room_number,
         'room_description' => $room_description,
         'room_status' => $room_status,

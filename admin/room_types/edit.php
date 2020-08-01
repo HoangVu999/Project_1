@@ -8,7 +8,7 @@ $rType = list_one_roomType('id', $id);
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Sửa loại phòng </h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Room Type </h6>
         </div>
         <div class="card-body">
             <form action="room_types/edit-save.php" method="post" enctype="multipart/form-data">
@@ -22,7 +22,7 @@ $rType = list_one_roomType('id', $id);
                 </div>
                 <div class="form-group">
                     <label for="name">Giảm giá loại phòng</label>
-                    <input type="number" name="price_sale" id="price_sale" class="form-control" placeholder="Tên danh mục" value="<?= $rType['room_price_sale'] ?>">
+                    <input type="text" name="price_sale" id="price_sale" class="form-control" placeholder="Tên danh mục" value="<?= $rType['room_price_sale'] ?>">
                 </div>
                 <input type="hidden" name="id" value="<?= $rType['id'] ?>">
                 <button type="submit" name="btn-edit" class="btn btn-primary">Ghi lại</button>
