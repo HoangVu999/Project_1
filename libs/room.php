@@ -7,10 +7,9 @@ function list_all_room()
     $sql = "SELECT 
     p.id as id, 
     c.name_room_type as name_room_type,  
-    images as image_room,
+    c.images as image_room,
     room_price, 
-    p.room_number as number_room,
-    p.room_description as description_room,
+    c.description as description_room,
     p.room_status as status_room
      
     FROM rooms p INNER JOIN room_types c ON p.room_type_id=c.id 
@@ -23,15 +22,11 @@ function list_one_product($id)
     return listOne('rooms', 'id', $id);
 }
 //thêm dữ liệu vào bảng
-function insert_room($room_type_id,$images,$room_number,$room_description,$room_status)
+function insert_room($room_type_id,$room_status)
 {
     
     $data = [
         'room_type_id' => $room_type_id,
-        'images' => $images,
-       
-        'room_number' => $room_number,
-        'room_description' => $room_description,
         'room_status' => $room_status,
         
     ];
@@ -43,14 +38,11 @@ function insert_room($room_type_id,$images,$room_number,$room_description,$room_
 
 //$cate_id, $name, ... dữ liệu để sửa
 //$id_value giá trị điều kiện sửa sản phẩm theo id
-function edit_room($room_type_id,$images,$room_number,$room_description,$room_status,$id)
+function edit_room($room_type_id,$room_status,$id)
 {
     
     $data = [
         'room_type_id' => $room_type_id,
-        'images' => $images,
-        'room_number' => $room_number,
-        'room_description' => $room_description,
         'room_status' => $room_status,
     ];
     var_dump($data);
@@ -65,12 +57,15 @@ function delete_room($id)
 
 //hàm tìm kiếm sản phẩm
 function search_rooms($name_room_type){
-    $sql = "SELECT p.id as id, 
-                p.name_room_type as  name_room_type,
-                p.images as images,
-                room_price,room_number,room_description,room_status
-                FROM rooms p join room_types c
-                ON p.name_room_type = c.id
+    $sql = "SELECT 
+    p.id as id, 
+    c.name_room_type as name_room_type,  
+    c.images as image_room,
+    room_price, 
+    c.description as description_room,
+    p.room_status as status_room
+     
+    FROM rooms p INNER JOIN room_types c ON p.room_type_id=c.id 
                 WHERE p.name_room_type LIKE '%$name_room_type%'";
     return query($sql);
 }

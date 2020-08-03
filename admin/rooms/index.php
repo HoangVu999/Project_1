@@ -43,11 +43,10 @@ $result = list_all_room();
                                 <input type="checkbox" name="checkall" id="checkall">
                             </th>
                             <th>ID</th>
-                            <th>Name Room</th>
                             <th>Images</th>
                             <th>Price</th>
-                            <th>Number Room</th>
-                            <th>Description </th>
+                            <th>Name Room</th>
+                            <th>Description</th>
                             <th>Status</th>
                             
                             <th>Action</th>
@@ -59,11 +58,10 @@ $result = list_all_room();
 
                             </th>
                             <th>ID</th>
-                            <th>Name Room</th>
                             <th>Images</th>
                             <th>Price</th>
-                            <th>Number Room</th>
-                            <th>Description </th>
+                            <th>Name Room</th>
+                            <th>Description</th>
                             <th>Status</th>
                             
                             <th>Action</th>
@@ -76,13 +74,11 @@ $result = list_all_room();
                                     <input type="checkbox" name="id[]" id="" value="<?= $r['id'] ?>">
                                 </td>
                                 <td><?= $r['id'] ?></td>
-                                <td><?= $r['name_room_type'] ?></td>
-                               
                                 <td>
                                     <img src="../images/<?= $r['image_room'] ?>" width="90" alt="">
                                 </td>
                                 <td><?= number_format($r['room_price'], 0, '', ',')  ?> VNĐ</td>
-                                <td><?= $r['number_room'] ?></td>
+                                <td><?= $r['name_room_type'] ?></td>
                                 <td><?= $r['description_room'] ?></td>
                                 <td><?= ($r['status_room']) ? 'Empty' : 'Full' ?></td>
                                 

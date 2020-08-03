@@ -25,19 +25,6 @@ $pro = list_all_roomType();
         </select>
         </div>
         <div class="form-group">
-            <label for="name">Image</label> <br>
-            <input type="file" name="images" class="form-file-input" id="">
-        </div>
-        
-        <div class="form-group">
-            <label for="name">Number Room</label>
-            <input type="text" name="room_number" id="name" class="form-control" placeholder="Nhập số phòng" required>
-        </div>
-        <div class="form-group">
-            <label for="name">Description</label>
-            <textarea type="text" name="room_description" id="description" class="form-control" rows="10"></textarea>
-        </div>
-        <div class="form-group">
             <label for="name">Status</label>
             <select name="room_status" id="status">
                 <option value="0">Empty</option>
@@ -49,9 +36,3 @@ $pro = list_all_roomType();
         </div>
     </div>
 </div>
-<script>
-    //Thêm trình soạn thảo văn bản tinymce vào phần nội dung của sản phẩm
-    tinymce.init({
-        selector: '#description'
-    });
-</script>

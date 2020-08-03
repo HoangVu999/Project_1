@@ -48,9 +48,9 @@ $roomType = list_all_roomType();
                         </th>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Images</th>
+                        <th>Description</th>
                         <th>Price</th>
-                        <th>Price-Sale</th>
-                       
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
@@ -61,9 +61,9 @@ $roomType = list_all_roomType();
                         </th>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Images</th>
+                        <th>Description</th>
                         <th>Price</th>
-                        <th>Prics-Sale</th>
-                        
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
@@ -76,8 +76,12 @@ $roomType = list_all_roomType();
                         </td>
                         <td><?= $rType['id']?></td>
                         <td><?= $rType['name_room_type']?></td>
+                        <td>
+                            <img src="../images/<?= $rType['images'] ?>" width="90" alt="">
+                        </td>
+                        <td><?= $rType['description']?></td>
                         <td><?= number_format($rType['room_price'], 0, '', ',') ?> VNĐ</td>
-                        <td><?= number_format($rType['room_price_sale'], 0, '', ',') ?> VNĐ</td>
+                        
                      
                         <td>
                             <?php

@@ -36,24 +36,6 @@ $cate = list_one_product($id);
         </select> <br>
 
         </div>
-      
-        <?php if($cate['images']!='') :?> 
-          <img src="../images/<?=$cate['images']?>" width="250px" alt="">
-          <input type="hidden" name="hinh" value="<?=$cate['images']?>">
-        <?php endif; ?>
-        <div class="form-group">
-            <label for="name">Image</label> <br>
-            <input type="file" name="images" class="form-file-input" id="">
-        </div>
-        
-        <div class="form-group">
-            <label for="name">Number Room</label>
-            <input type="text" name="room_number" id="number_room" class="form-control" value="<?=$cate['room_number']?>" required>
-        </div>
-        <div class="form-group">
-            <label for="name">Description</label>
-            <textarea type="text" name="room_description" id="description" class="form-control" rows="10"><?= $cate ['room_description']?></textarea>
-        </div>
         <div class="form-check">
         <input type="checkbox" name="room_status" class="form-check-input status" id="" <?= ($cate['room_status'] == 0) ? 'checked' : '' ?>> 
         <label for="status" class="status-title">Trạng thái 
