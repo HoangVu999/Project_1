@@ -1,22 +1,23 @@
 <?php
-require_once '../libs/room.php';
+require_once '../libs/order.php';
+
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    delete_room($id);
+    delete_new($id);
     $_SESSION['message'] = "Xóa dữ liệu thành công";
-    header('location:' . ROOT . 'admin/?page=room');
+    header('location:' . ROOT . 'admin/?page=order');
     die;
 }
 if(isset($_POST['btn-del'])){
     extract($_REQUEST);
-    foreach ($id as $id_room){
-        delete_room($id_room);
+    foreach ($id as $id_order){
+        delete_order($id_order);
     }
     $_SESSION['message'] = "Xóa dữ liệu thành công";
-    header('location:' . ROOT . 'admin/?page=room');
+    header('location:' . ROOT . 'admin/?page=order');
     die;
 }
-$result = list_all_room();
+$order = list_all_order();
 ?>
 
 <!-- Begin Page Content -->
@@ -43,53 +44,57 @@ $result = list_all_room();
                                 <input type="checkbox" name="checkall" id="checkall">
                             </th>
                             <th>ID</th>
-                            <th>Name Room</th>
-                            <th>Images</th>
-                            <th>Price</th>
-                            <th>Number Room</th>
-                            <th>Description </th>
+                            <th>User_Name</th>
+                            <th>User_Phone</th>
+                            <th>User_Email</th>
+                            <th>Adult_Number</th>
+                            <th>Child_Number</th>
+                            <th>Booking_Day</th>
+                            <th>Start_Day</th>
+                            <th>End_Day</th>
+                            <th>Sum_Price</th>
                             <th>Status</th>
-                            
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>
-
                             </th>
                             <th>ID</th>
-                            <th>Name Room</th>
-                            <th>Images</th>
-                            <th>Price</th>
-                            <th>Number Room</th>
-                            <th>Description </th>
+                            <th>User_Name</th>
+                            <th>User_Phone</th>
+                            <th>User_Email</th>
+                            <th>Adult_Number</th>
+                            <th>Child_Number</th>
+                            <th>Booking_Day</th>
+                            <th>Start_Day</th>
+                            <th>End_Day</th>
+                            <th>Sum_Price</th>
                             <th>Status</th>
-                            
                             <th>Action</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        <?php foreach ($result as $r) : ?>
+                        <?php foreach ($order as $o) : ?>
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="id[]" id="" value="<?= $r['id'] ?>">
+                                    <input type="checkbox" name="id[]" id="" value="<?= $o['id'] ?>">
                                 </td>
-                                <td><?= $r['id'] ?></td>
-                                <td><?= $r['name_room_type'] ?></td>
-                               
+                                <td><?= $o['id'] ?></td>
+                                <td><?= $o['username'] ?></td>
+                                <th><?= $o['userphone'] ?></th>
+                                <th><?= $o['useremail'] ?></th>
+                                <th><?= $o['order_adult_number'] ?></th>
+                                <th><?= $o['order_child_number'] ?></th>
+                                <th><?= $o['order_booking_day'] ?></th>
+                                <th><?= $o['order_start_day'] ?></th>
+                                <th><?= $o['order_end_day'] ?></th>
+                                <td><?= number_format($o['order_sum_price'], 0, '', ',')  ?> VNĐ</td>
+                                <td><?= ($o['order_status']) ? 'Success' : 'Unfinished' ?></td>
                                 <td>
-                                    <img src="../images/<?= $r['image_room'] ?>" width="90" alt="">
-                                </td>
-                                <td><?= number_format($r['room_price'], 0, '', ',')  ?> VNĐ</td>
-                                <td><?= $r['number_room'] ?></td>
-                                <td><?= $r['description_room'] ?></td>
-                                <td><?= ($r['status_room']) ? 'Empty' : 'Full' ?></td>
-                                
-
-                                <td>
-                                    <a href="<?= ROOT ?>admin/?page=room&action=edit&id=<?= $r['id'] ?>" class="btn btn-success"><i class="far fa-edit"></i>Edit</a>
-                                    <a href="<?= ROOT ?>admin/?page=room&id=<?= $r['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa không')" class="btn btn-danger"><i class="far fa-trash-alt"></i>Delete</a>
+                                    <a href="<?= ROOT ?>admin/?page=order&action=edit&id=<?=$o['id'] ?>" class="btn btn-success"><i class="far fa-edit"></i></a>
+                                    <a href="<?= ROOT ?>admin/?page=order&id=<?= $o['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa không')" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

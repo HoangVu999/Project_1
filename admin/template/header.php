@@ -19,6 +19,9 @@ $user = list_all_user();
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
               rel="stylesheet">
         <script src="https://cdn.tiny.cloud/1/ld34vclndumv7xny2s3pnsrpxwoe9floxn96fpbl57r085kv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 
         <!-- Custom styles for this template-->
         <link href="resource/css/sb-admin-2.min.css" rel="stylesheet">
@@ -75,19 +78,19 @@ $user = list_all_user();
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
+            <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=order"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
                 <span>Quản lý hóa đơn: </span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=room"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-pager"></i>
                 <span>Quản lý hóa đơn chi tiết: </span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= ROOT ?>admin/?page=new"
                aria-expanded="true" aria-controls="collapseTwo">

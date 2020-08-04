@@ -1,6 +1,9 @@
 <?php
 require_once '../libs/users.php';
 $user = list_all_user();
+
+?>
+
 ?>
 <div class="container-fluid">
     <div class="card shadow mb-4">
@@ -8,16 +11,22 @@ $user = list_all_user();
             <h6 class="m-0 font-weight-bold text-primary">Thêm User</h6>
         </div>
         <div class="card-body">
-            <form action="users/create-save.php" method="post" enctype="multipart/form-data">
+            <form action="users/create-save.php" method="post" enctype="multipart/form-data" id="add-user-form">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fullname">Full name <span class="text-danger">*</span></label>
-                            <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Nhập đầy đủ tên" required>
+                            <input type="text" name="fullname" id="fullname" class="form-control"
+                                   placeholder="Nhập đầy đủ tên" required>
                         </div>
                         <div class="form-group">
                             <label for="username">User Name <span class="text-danger">*</span></label>
-                            <input type="text" name="username" id="username" class="form-control" placeholder="Nhập tên đăng nhập" required>
+                            <input type="text" name="username" id="username" class="form-control"
+                                   placeholder="Nhập tên đăng nhập" required>
+                                   <?php if(isset($_GET['nameerr'])):?>
+                                    <label class="error"><?= $_GET['nameerr']?></label>
+                                <?php endif; ?>
+                       
                         </div>
                         <div class="form-group">
                             <label for="image">Image <span class="text-danger">*</span></label><br>
@@ -25,7 +34,11 @@ $user = list_all_user();
                         </div>
                         <div class="form-group">
                             <label for="email">Email <span class="text-danger">*</span></label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email"
+                                   required>
+                                   <?php if(isset($_GET['emailerr'])):?>
+                                    <label class="error"><?= $_GET['emailerr']?></label>
+                                <?php endif; ?>
                         </div>
 
                         <div class="form-group">
@@ -64,3 +77,7 @@ $user = list_all_user();
         </div>
     </div>
 </div>
+
+<script>
+
+</script>
