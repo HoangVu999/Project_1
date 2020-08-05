@@ -6,6 +6,7 @@ function list_all_room()
 {
     $sql = "SELECT 
     p.id as id, 
+    name_room,
     c.name_room_type as name_room_type,  
     c.images as image_room,
     room_price, 
@@ -22,10 +23,11 @@ function list_one_product($id)
     return listOne('rooms', 'id', $id);
 }
 //thêm dữ liệu vào bảng
-function insert_room($room_type_id,$room_status)
+function insert_room($name_room,$room_type_id,$room_status)
 {
     
     $data = [
+        'name_room'=>$name_room,
         'room_type_id' => $room_type_id,
         'room_status' => $room_status,
         
@@ -38,10 +40,11 @@ function insert_room($room_type_id,$room_status)
 
 //$cate_id, $name, ... dữ liệu để sửa
 //$id_value giá trị điều kiện sửa sản phẩm theo id
-function edit_room($room_type_id,$room_status,$id)
+function edit_room($name_room,$room_type_id,$room_status,$id)
 {
     
     $data = [
+        'name_room'=>$name_room,
         'room_type_id' => $room_type_id,
         'room_status' => $room_status,
     ];

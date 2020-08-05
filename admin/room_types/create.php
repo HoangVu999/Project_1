@@ -15,6 +15,7 @@
         </div>
         <div class="card-body">
             <form action="room_types/create-save.php" method="post" enctype="multipart/form-data" class="col-md-8 m-auto">
+                
                 <div class="form-group">
                     <label for="name"> Loại phòng</label>
                     <input type="text" name="name_room_type" id="name_room_type" class="form-control" placeholder="Nhập tên loại phòng" required>
@@ -24,6 +25,7 @@
                     <label for="name">Image</label> <br>
                     <input type="file" name="images" class="form-file-input" id="">
                 </div>
+                
                 <div class="form-group">
                     <label for="name"> Description</label>
                     <textarea type="text" name="description" id="description" class="form-control" placeholder="Nhập nội dung..." ></textarea>

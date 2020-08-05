@@ -23,11 +23,15 @@ $cate = list_one_product($id);
         </div>
         <div class="card-body">
         <form action="rooms/edit-save.php" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="name">Name Categories</label> <br>
+                <div class="form-group">
+                    <label for="name"> Tên Phòng</label>
+                    <input type="text" name="name_room" id="name_room" class="form-control" value="<?=$cate['name_room']?>" >
+                </div>
+            <div class="form-group">
+            <label for="name">Name Room Type</label> <br>
             <select name="room_type_id" id="">
             <?php foreach($dm as $d): ?>
-                <?php if ($d['id']==$cate['cate_id']) :?>
+                <?php if ($d['id']==$cate['name_room_type']) :?>
                 <option value="<?=$d['id']?>"selected><?=$d['name_room_type']?></option>
                 <?php else :?>
                     <option value="<?=$d['id']?>"><?=$d['name_room_type']?></option>

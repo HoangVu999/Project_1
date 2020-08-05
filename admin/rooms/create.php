@@ -15,7 +15,11 @@ $pro = list_all_roomType();
         </div>
         <div class="card-body">
         <form action="rooms/create-save.php" method="post" enctype="multipart/form-data">
-        <div class="form-group">
+                <div class="form-group">
+                    <label for="name"> Tên Phòng</label>
+                    <input type="text" name="name_room" id="name_room" class="form-control" placeholder="Nhập tên phòng" required>
+                </div>
+            <div class="form-group">
             <label for="name">Name Room Type</label>
             <br>
             <select name="room_type_id" id="">
